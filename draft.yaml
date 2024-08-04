@@ -1,0 +1,44 @@
+models:
+  SideLink:
+    name: string
+    link: longText
+    icon: longText
+    type: enum:social,main
+
+  Hero:
+    key: string
+    value: longText
+
+  ProjectCategory:
+    name: string
+
+  Project:
+    name: string
+    image: longText
+    backLink: longText
+    desc: longText
+    project_category_id: foreign
+
+  SkillCategory:
+    name: string
+
+  Skill:
+    name: string
+    border_color: string
+    skill_category_id: foreign
+
+  MiniProjects:
+    icon: longText
+    name: string
+    backLink: longText
+    desc: longText
+
+  Contact:
+    name: string
+    email: email
+    phone: string
+    message: longText 
+
+  
+
+  

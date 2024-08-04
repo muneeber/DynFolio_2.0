@@ -1,0 +1,35 @@
+created:
+    - database/factories/SideLinkFactory.php
+    - database/factories/HeroFactory.php
+    - database/factories/ProjectCategoryFactory.php
+    - database/factories/ProjectFactory.php
+    - database/factories/SkillCategoryFactory.php
+    - database/factories/SkillFactory.php
+    - database/factories/MiniProjectsFactory.php
+    - database/factories/ContactFactory.php
+    - database/migrations/2024_08_04_000054_create_side_links_table.php
+    - database/migrations/2024_08_04_000055_create_heroes_table.php
+    - database/migrations/2024_08_04_000056_create_project_categories_table.php
+    - database/migrations/2024_08_04_000057_create_projects_table.php
+    - database/migrations/2024_08_04_000058_create_skill_categories_table.php
+    - database/migrations/2024_08_04_000059_create_skills_table.php
+    - database/migrations/2024_08_04_000100_create_mini_projects_table.php
+    - database/migrations/2024_08_04_000101_create_contacts_table.php
+    - app/Models/SideLink.php
+    - app/Models/Hero.php
+    - app/Models/ProjectCategory.php
+    - app/Models/Project.php
+    - app/Models/SkillCategory.php
+    - app/Models/Skill.php
+    - app/Models/MiniProjects.php
+    - app/Models/Contact.php
+models:
+    User: { name: string, email: string, email_verified_at: 'timestamp nullable default:NULL', password: string, remember_token: 'string:100 nullable default:NULL' }
+    SideLink: { name: string, link: longText, icon: longText, type: 'enum:social,main' }
+    Hero: { key: string, value: longText }
+    ProjectCategory: { name: string }
+    Project: { name: string, image: longText, backLink: longText, desc: longText, project_category_id: foreign }
+    SkillCategory: { name: string }
+    Skill: { name: string, border_color: string, skill_category_id: foreign }
+    MiniProjects: { icon: longText, name: string, backLink: longText, desc: longText }
+    Contact: { name: string, email: email, phone: string, message: longText }

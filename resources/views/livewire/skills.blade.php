@@ -14,7 +14,7 @@
                         {{ $skill->name }}
                         </div>
                   @endforeach
-
+                
                     
                 </div>
                 @endforeach

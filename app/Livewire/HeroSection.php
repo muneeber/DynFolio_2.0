@@ -20,22 +20,7 @@ class HeroSection extends Component
       $this->btn_icon=Hero::where('key','btn_icon')->first()->value;
       $this->backLink=Hero::where('key','backLink')->first()->value;
     }
-    public function hi()
-    {
-        $train = [
-            [
-                'key' => 'backLink',
-                'value' => './hi'
-            ],
 
-        ];
-        foreach ($train as $key => $value) {
-            # code...
-            $res[] = Hero::create($value);
-        }
-
-        dd($res);
-    }
     public function render()
     {
         return view('livewire.heroSection');
